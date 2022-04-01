@@ -34,8 +34,9 @@ while incorrect_input:
     user_input = input("Enter a word: ").upper()
     try:
         phonetic_code = [dict_nato[letter] for letter in user_input]
-    except KeyError:
+    except KeyError as error:
         print("Sorry, only letters in the alphabet please.")
+        print(f"{error} is not in the NATO alphabet.")
     else:
         incorrect_input = False
 
